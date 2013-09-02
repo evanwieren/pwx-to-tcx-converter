@@ -8,7 +8,7 @@ require "builder"
 doc = REXML::Document.new File.new(ARGV[0])
 
 xml = Builder::XmlMarkup.new( :target => $stdout, :indent => 2 )
-xml.instruct! :xml, :version => "1.1", :encoding => "US-ASCII"
+xml.instruct! :xml, :version => "1.0", encoding: "UTF-8", standalone: "no"
 
 count = 0
 
